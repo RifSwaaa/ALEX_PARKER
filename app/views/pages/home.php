@@ -1,6 +1,6 @@
 <!-- Blog Post Start -->
 <div class="col-md-12 blog-post row">
-<?php foreach($posts as $post): ?>
+                    <?php foreach($posts as $post): ?>
                     <div class="post-title">
                       <a href="single.html"
                         ><h1>
@@ -12,10 +12,10 @@
                       <span><?php echo $post ['created_at'] ?></span> | <span>Life style</span>
                     </div>
                     <p>
-                    <?php echo $post ['text'] ?>
+                    <?php echo \Core\Helpers\truncate($post ['text']) ?>...
                     </p>
                     <a
-                      href="single.html"
+                      href="?postId=<?php echo $post['id']; ?>"
                       class="
                         button button-style button-anim
                         fa fa-long-arrow-right
