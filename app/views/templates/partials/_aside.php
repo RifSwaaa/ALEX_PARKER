@@ -6,7 +6,7 @@
                 /></a>
                 <nav id="menu">
                   <ul class="menu-link">
-                    <li><a href="index.html">My blog</a></li>
+                    <li><a href="?">My blog</a></li>
                   </ul>
                 </nav>
                 <ul class="menu-link">

@@ -8,8 +8,8 @@
 	//	CTRL: pagesController
 	//	ACTION: homeAction
 	//	TITLE: Alex Parker - Blog
-	include_once '../app/controllers/pagesController.php';
-    	\App\Controllers\PagesController\homeAction($connexion);
+	// include_once '../app/controllers/pagesController.php';
+    // 	\App\Controllers\PagesController\homeAction($connexion);
 
 
 // ROUTE DETAIL D'UN POST: detail d'un post
@@ -23,3 +23,16 @@
 //	else :	
 //		
 //	endif;
+
+if (isset($_GET['postId'])) :
+    include_once '../app/controllers/postsController.php';
+    \App\Controllers\PostsController\showAction($connexion, $_GET['postId']);
+
+// ROUTE PAR DEFAUT
+// PATERN : /
+// CTRL : pagesController
+// ACTION : homeAction
+else:
+    include_once '../app/controllers/pagesController.php';
+    \App\Controllers\PagesController\homeAction($connexion);
+endif;

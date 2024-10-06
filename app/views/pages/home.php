@@ -1,3 +1,10 @@
+<!-- ADD A POST -->
+<div>
+        <a href="?form" type="button" class="btn btn-primary"
+          >Add a Post</a
+        >
+      </div>
+      <!-- ADD A POST END -->
 <!-- Blog Post Start -->
 <div class="col-md-12 blog-post row">
                     <?php foreach($posts as $post): ?>
